@@ -40,6 +40,10 @@ p {
     pointer-events: auto;
 }
 
+#aboutbio {
+    pointer-events: initial;
+}
+
 
 /* Page Loader */
 
@@ -434,7 +438,7 @@ main {
 
 .content__img-big {
     grid-area: image;
-    width: 100%
+    width: 100%;
 }
 
 
@@ -466,17 +470,13 @@ main {
     -webkit-transform-origin: 50% 50%;
     -ms-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
-    -webkit-animation: wink 5s infinite .3s;
-    animation: wink 5s infinite .3s;
-    -webkit-animation-play-state: paused;
-    animation-play-state: paused;
+    -webkit-animation: wink 15s infinite 3s;
+    animation: wink 15s infinite 3s;
 }
 
 .eye-left {
-    animation: move-eyes-down 5s infinite .3s;
-    -webkit-animation: move-eyes-down 5s infinite .3s;
-    -webkit-animation-play-state: paused;
-    animation-play-state: paused;
+    animation: move-eyes-down 15s infinite 3s;
+    -webkit-animation: move-eyes-down 15s infinite 3s;
 }
 
 @keyframes wink {
@@ -484,19 +484,19 @@ main {
         -webkit-transform: translateY(0) scaleY(1);
         transform: translateY(0) scaleY(1);
     }
-    8% {
+    2% {
         -webkit-transform: translateY(15%) scaleY(.1);
         transform: translateY(15%) scaleY(.1);
     }
-    10% {
+    3% {
         -webkit-transform: translateY(19%) scaleY(.1);
         transform: translateY(19%) scaleY(.1);
     }
-    12% {
+    4% {
         -webkit-transform: translateY(15%) scaleY(.1);
         transform: translateY(15%) scaleY(.1);
     }
-    20% {
+    6% {
         -webkit-transform: translateY(0) scaleY(1);
         transform: translateY(0) scaleY(1);
     }
@@ -511,19 +511,19 @@ main {
         -webkit-transform: translateY(0) scaleY(1);
         transform: translateY(0) scaleY(1);
     }
-    8% {
+    2% {
         -webkit-transform: translateY(15%) scaleY(.1);
         transform: translateY(15%) scaleY(.1);
     }
-    10% {
+    3% {
         -webkit-transform: translateY(19%) scaleY(.1);
         transform: translateY(19%) scaleY(.1);
     }
-    12% {
+    4% {
         -webkit-transform: translateY(15%) scaleY(.1);
         transform: translateY(15%) scaleY(.1);
     }
-    20% {
+    6% {
         -webkit-transform: translateY(0) scaleY(1);
         transform: translateY(0) scaleY(1);
     }
@@ -538,19 +538,19 @@ main {
         -webkit-transform: translateY(0);
         transform: translateY(0);
     }
-    8% {
+    2% {
         -webkit-transform: translateY(15%);
         transform: translateY(15%);
     }
-    10% {
+    3% {
         -webkit-transform: translateY(19%);
         transform: translateY(19%);
     }
-    12% {
+    4% {
         -webkit-transform: translateY(15%);
         transform: translateY(15%);
     }
-    20% {
+    6% {
         -webkit-transform: translateY(0);
         transform: translateY(0);
     }
@@ -565,19 +565,19 @@ main {
         -webkit-transform: translateY(0);
         transform: translateY(0);
     }
-    8% {
+    2% {
         -webkit-transform: translateY(15%);
         transform: translateY(15%);
     }
-    10% {
+    3% {
         -webkit-transform: translateY(19%);
         transform: translateY(19%);
     }
-    12% {
+    4% {
         -webkit-transform: translateY(15%);
         transform: translateY(15%);
     }
-    20% {
+    6% {
         -webkit-transform: translateY(0);
         transform: translateY(0);
     }
@@ -606,9 +606,17 @@ main {
 .content__img {
     grid-column: 1 / 3;
     grid-row: 1 / 3;
+    opacity: 0.7;
+    height: auto;
+    width: 100%;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.content--layout:hover .content__img {
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
     opacity: 0.9;
-    width: 300px;
-    height: 300px;
 }
 
 .content__text {
@@ -641,11 +649,11 @@ main {
 .content__img,
 .content__title,
 .content__desc {
-    -webkit-transition: -webkit-transform 0.3s ease-out;
-    transition: -webkit-transform 0.3s ease-out;
-    -o-transition: transform 0.3s ease-out;
-    transition: transform 0.3s ease-out;
-    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+    -webkit-transition: opacity 0.3s ease-out, -webkit-transform 0.3s ease-out, -webkit-filter 0.3s ease-out;
+    transition: opacity 0.3s ease-out, -webkit-transform 0.3s ease-out, -webkit-filter 0.3s ease-out;
+    -o-transition: transform 0.3s ease-out, opacity 0.3s ease-out, filter 0.3s ease-out;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out, filter 0.3s ease-out;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out, filter 0.3s ease-out, -webkit-transform 0.3s ease-out, -webkit-filter 0.3s ease-out;
 }
 
 .content__link {
@@ -964,7 +972,7 @@ main {
     }
 }
 
-@media only screen and (min-width: 320px) and (max-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+@media only screen and (min-width: 320px) and (max-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
     .overlay-portrait {
         display: flex;
         position: fixed;
