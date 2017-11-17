@@ -454,12 +454,6 @@ main {
     filter: drop-shadow( 4px 8px 8px #000);
 }
 
-.winking__face:hover .eye-left,
-.winking__face:hover .eye-right {
-    -webkit-animation-play-state: running;
-    animation-play-state: running;
-}
-
 .winking__face .main-group path {
     fill: var(--svg-color);
     -webkit-box-shadow: rgba(211, 165, 110, 0.498039) 0px 30px 30px 1px, rgb(245, 245, 245) 0px 20px 10px 1px;
@@ -838,6 +832,11 @@ main {
 }
 
 @media screen and (max-width: 50em) {
+    .winking__face .eye-left,
+    .winking__face .eye-right {
+        -webkit-animation-play-state: paused;
+        animation-play-state: paused;
+    }
     .content--fixed {
         height: auto;
         min-height: 0;
