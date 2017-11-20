@@ -370,6 +370,10 @@ main {
     font-weight: 500;
 }
 
+.header__link--left {
+    float: left;
+}
+
 
 /* Intro */
 
