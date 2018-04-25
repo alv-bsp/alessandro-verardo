@@ -1,35 +1,29 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="it" class="no-js">
 
 <head>
 	<!-- Meta Tags -->
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Alessandro Verardo | Web Designer - UX Designer - Marketing Consultant</title>
-	<meta name="description" content="My name is Alessandro Verardo, I'm an Italian web designer, come in and have a look at what i can do!"
+	<title>Alessandro Verardo | Web Designer - Frontend Developer</title>
+	<meta name="description" content="Mi chiamo Alessandro Verardo, sono un web designer italiano, entra nel sito per dare un'occhiata a quello che faccio ;)"
 	/>
 	<meta name="keywords" content="alessandro verardo, alessandro, verardo, web developer, web designer, design, web designer pordenone, web developer pordenone, siti web pordenone, interaction designer"
 	/>
 	<meta name="author" content="Alessandro Verardo" />
 	<!-- OG Meta -->
 	<meta property="og:title" content="Alessandro Verardo | UX e Web Designer">
-	<meta property="og:description" content="My name is Alessandro Verardo, I'm an Italian web designer, come in and have a look at what i can do!">
+	<meta property="og:description" content="Ciao sono Alessandro, mi occupo di UX e Web Design con una passione per l'online marketing, fatti un giro!">
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="http://alessandroverardo.it/">
 	<meta property="og:image" content="http://alessandroverardo.it/img/og-image.jpg">
 	<meta property="og:site_name" content="Alessandro Verardo Portfolio">
-	<!-- Favicons -->
-	<link rel="shortcut icon" href="favicon.ico">
+	<!-- Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Hind:300,400" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
+	<!-- Style -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-	<link rel="manifest" href="/manifest.json">
-	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#3cc47c">
-	<meta name="theme-color" content="#ffffff">
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109815193-1"></script>
 	<script>
@@ -56,153 +50,191 @@
 	</script>
 </head>
 
-<body class="loading">
-	<svg class="hidden">
-		<symbol id="icon-arrow" viewBox="0 0 24 24">
-			<title>arrow</title>
-			<polygon points="6.3,12.8 20.9,12.8 20.9,11.2 6.3,11.2 10.2,7.2 9,6 3.1,12 9,18 10.2,16.8 " />
-		</symbol>
-		<symbol id="icon-drop" viewBox="0 0 24 24">
-			<title>drop</title>
-			<path d="M12,21c-3.6,0-6.6-3-6.6-6.6C5.4,11,10.8,4,11.4,3.2C11.6,3.1,11.8,3,12,3s0.4,0.1,0.6,0.3c0.6,0.8,6.1,7.8,6.1,11.2C18.6,18.1,15.6,21,12,21zM12,4.8c-1.8,2.4-5.2,7.4-5.2,9.6c0,2.9,2.3,5.2,5.2,5.2s5.2-2.3,5.2-5.2C17.2,12.2,13.8,7.3,12,4.8z"
-			/>
-			<path d="M12,18.2c-0.4,0-0.7-0.3-0.7-0.7s0.3-0.7,0.7-0.7c1.3,0,2.4-1.1,2.4-2.4c0-0.4,0.3-0.7,0.7-0.7c0.4,0,0.7,0.3,0.7,0.7C15.8,16.5,14.1,18.2,12,18.2z"
-			/>
-		</symbol>
-		<symbol id="shape-demo" viewBox="0 0 200 100">
-			<title>shape demo</title>
-			<path d="M 6.144,74.1 C 20.4,107.4 70.13,94.33 94.22,95.74 121.3,97.41 130.8,101.1 154.7,99.38 178.6,97.72 201.9,78.95 199.4,46.86 197.1,14.96 174.9,4.781 161.4,1.827 147.9,-1.128 119.8,8.284 105.6,8.766 85.34,9.449 81.91,7.628 51.08,2.334 17.26,-3.482 -8.105,40.84 6.144,74.1 Z"
-			/>
-		</symbol>
-	</svg>
-	<div class="hidden overlay-portrait content-colored">
-		<span>Hey! Stop it!</span>
-		<img src="img/rotate-icon.png">
-	</div>
-	<main>
-		<div class="morph-wrap">
-			<svg class="morph" width="1400" height="770" viewBox="0 0 1400 770">
-				<polygon points="700,84.4 1047.1,685.6 352.9,685.6 352.9,685.6 352.9,685.6 352.9,685.6" />
+<body>
+	<div class="is-loading is-clipped">
+		<div id="svgLoader">
+			<svg width="128" height="128" viewBox="0 0 128 128">
+				<polygon points="64 68.86327398363571 8.574 99.98495458331296 63.239606973887156 67.54579488315159 64 3.984954583312958 64.76039302611285 67.54579488315159 119.426 99.98495458331296"
+				 fill="currentColor"></polygon>
 			</svg>
 		</div>
-		<!-- Header -->
-		<div class="content content--fixed">
-			<header class="header">
-				<a class="link header__link" href="mailto:verardo.ale@hotmail.com?Subject=Hello!%20Contact%20from%20the%20website">
-					<span data-letters="Contact me!">Contact me!</span>
-				</a>
-				<a class="link header__link header__link--left" href="/">
-					<span data-letters="Rimetti in italiano">Rimetti in italiano</span>
-				</a>
-			</header>
-		</div>
-		<!-- Intro -->
-		<div class="content-wrap content-dark">
-			<div class="content content--hero">
-				<h1 class="content__h1">Alessandro Verardo</h1>
-				<h2 class="content__subtitle">UX & Interaction Designer - Creative Developer</h2>
-				<div class="content__action">
-					<div class='icon-scroll'></div>
-				</div>
+	</div>
+	<div class="is-hidden overlay-portrait content-colored">
+		<span>Hey! Rimettimi verticale!</span>
+		<img src="img/rotate-icon.png">
+	</div>
+	<div class="morph-wrap">
+		<svg class="morph" width="1400" height="770" viewBox="0 0 1400 770">
+			<polygon id="Triangle" points="700.5 38 1048 733 353 733"></polygon>
+		</svg>
+	</div>
+	<!-- Header -->
+	<header class="is-fixed">
+		<a class="link has-animation is-right" href="mailto:verardo.ale@hotmail.com?Subject=Ciao!%20ti%20contatto%20dal%20sito">
+			Get in touch!
+		</a>
+		<a class="link has-animation" href="/">
+			It
+		</a>
+	</header>
+	<!-- Intro -->
+	<section class="hero is-viewheight">
+		<div class="hero-body has-text-centered columns is-flex is-vcentered">
+			<div class="container">
+				<h1 class="title is-spaced is-big">
+					Alessandro Verardo
+				</h1>
+				<h2 class="subtitle">
+					I'm a web designer
+				</h2>
+				<div class='icon-scroll'></div>
 			</div>
 		</div>
-		<div class="content-wrap content-colored content-top">
-			<div class="content content--split">
-				<div class="content__img-big">
-					<div class="winking">
-						<svg class="winking__face" height="600px" version="1.1" viewbox="0 0 144 144" width="600px" xmlns="http://www.w3.org/2000/svg"
-						 xmlns:xlink="http://www.w3.org/1999/xlink">
-							<title>guy</title>
-							<defs></defs>
-							<g class="main-group" fill-rule="evenodd" stroke="none" stroke-width="1">
-								<path d="M102.65,79.231 C102.388,78.233 101.802,77.374 101.125,76.663 C101.582,74.663 101.832,72.585 101.832,70.448 C101.832,67.698 101.427,65.042 100.679,62.534 L100.679,56.601 C100.679,44.54 89.963,42.084 87.455,41.675 C85.052,38.688 81.831,37.173 77.876,37.173 C73.05,37.173 68.585,39.472 67.105,40.32 C65.2,39.617 63.383,39.262 61.691,39.262 C55.803,39.262 52.486,43.651 51.337,46.417 C49.338,47.057 47.808,48.302 46.779,50.123 C43.665,55.644 46.376,64.636 46.493,65.017 C46.563,65.246 46.703,65.431 46.876,65.574 C46.597,67.156 46.441,68.783 46.441,70.447 C46.441,72.373 46.637,74.252 47.013,76.066 C46.319,76.88 45.674,77.916 45.433,79.138 C45.15,80.593 45.467,82.033 46.38,83.417 C46.07,85.729 46.511,89.548 49.943,90.917 C50.193,93.62 51.656,97.581 55.89,98.089 C56.571,100.542 58.541,104.044 62.498,104.044 C62.789,104.044 63.091,104.023 63.395,103.985 C64.341,104.76 66.661,106.356 69.742,106.352 C71.266,106.352 72.767,105.963 74.217,105.192 C75.837,105.829 77.359,106.147 78.754,106.147 L78.754,106.147 C82.49,106.147 84.384,103.942 85.159,102.684 C85.438,102.711 85.716,102.727 85.984,102.727 C89.716,102.727 91.63,99.936 92.336,97.907 C96.607,97.423 98.076,93.444 98.329,90.731 C101.764,89.364 102.203,85.54 101.892,83.231 C102.948,81.602 102.898,80.17 102.65,79.231 M74.137,90.913 C68.756,90.913 64.445,87.558 62.597,82.835 L85.677,82.835 C83.828,87.557 79.517,90.913 74.137,90.913 M96.93,73.899 C96.39,73.7 95.83,73.59 95.253,73.59 C93.144,73.59 91.325,74.951 90.292,75.926 C89.194,74.953 87.914,74.444 86.526,74.444 C84.598,74.444 82.918,75.423 82.056,76.036 C81.053,75.63 80.03,75.425 79.004,75.425 C76.824,75.425 75.12,76.347 74.167,77.021 C72.835,76 71.241,75.466 69.504,75.466 C68.107,75.466 66.907,75.808 66.204,76.066 C64.807,75.146 63.366,74.681 61.912,74.681 C60.28,74.681 58.982,75.275 58.157,75.794 C56.258,73.786 54.152,73.333 52.642,73.333 C52.141,73.333 51.684,73.386 51.274,73.458 C51.145,72.47 51.055,71.47 51.055,70.448 C51.055,65.251 52.804,60.465 55.713,56.603 C56.304,56.66 56.901,56.698 57.494,56.698 C64.253,56.698 69.892,52.93 73.627,50.438 C74.937,49.563 76.066,48.807 76.92,48.419 C77.5,48.156 78.083,47.958 78.674,47.821 C89.234,49.936 97.215,59.275 97.215,70.447 C97.217,71.624 97.1,72.77 96.93,73.899"
-								 fill="#000000" id="face"></path>
-								<path class="eye-right" d="M87.984,65.254 C87.984,67.486 86.176,69.293 83.945,69.293 C81.714,69.293 79.906,67.486 79.906,65.254 C79.906,63.024 81.714,61.216 83.945,61.216 C86.176,61.216 87.984,63.024 87.984,65.254"
-								 fill="#000000" id="eye-right"></path>
-								<path class="eye-left" d="M68.366,65.254 C68.366,67.486 66.558,69.293 64.327,69.293 C62.096,69.293 60.288,67.486 60.288,65.254 C60.288,63.024 62.096,61.216 64.327,61.216 C66.558,61.216 68.366,63.024 68.366,65.254"
-								 fill="#000000" id="eye-left"></path>
-								<g id="guy"></g>
-							</g>
-						</svg>
+	</section>
+	<!-- Bio -->
+	<section id="bio" class="section content-animated-bg">
+		<div class="container">
+			<div class="columns">
+				<div class="column is-offset-1 is-5 has-text-centered">
+					<video class="is-hidden-touch has-outer-shadow" id="alessandro-doodle" src="img/alessandro-doodle.mp4"></video>
+					<img class="is-hidden-desktop has-outer-shadow" id="alessandro-doodle-gif" src="img/alessandro-doodle.gif">
+				</div>
+				<div class="column is-5 content">
+					<h3 class="title is-spaced is-3">
+						<b>Hello there!</b>
+					</h3>
+					<div class="has-green-box">
+						<p>My name is Alex and i'm a web designer.</p>
+						<p>I'm work at my best when designing websites and web applications. I started as a frontend developer so
+							I'm well aware of the potential and limitations of the coding side, which allows me to easily connect with developers.</p>
+						<p>Here's a few of my favourite projects that i've worked on, take a look!</p>
 					</div>
 				</div>
-				<div class="content__text">
-					<h3>Hello there!</h3>
-					<p>My name is Alessandro (you can call me Alex), I'm an Italian UX and Web Designer.</p>
-					<p>I love designing unique and cool experiences. Interactive, fun but functional at the same time. I also enjoy monitoring
-						how users end up experiencing my creations, helping me to improve where i see usability flaws.</p>
-					<p>Here I've selected some of my favourite projects, have fun!</p>
+			</div>
+		</div>
+	</section>
+	<!-- Portfolio -->
+	<section class="section content-animated-bg">
+		<div class="container is-layout-regular">
+			<div class="portfolio-description is-absolute">
+				<h3 class="title is-spaced is-portfolio-special">Image Group</h3>
+				<a href="http://www.imagesrl.com/" target="_blank" class="link has-animation">Check it out!</a>
+			</div>
+			<div class="portfolio-item" style="background-image:url('img/imagegroup-fullpage.jpg')"></div>
+		</div>
+	</section>
+	<section class="section content-animated-bg">
+		<div class="container is-layout-inverted">
+			<div class="portfolio-description is-absolute">
+				<h3 class="title is-spaced is-portfolio-special">RedLime</h3>
+				<a href="https://www.redlime.it/" target="_blank" class="link has-animation">Check it out!</a>
+			</div>
+			<div class="portfolio-item" style="background-image:url('img/redlime-fullpage.jpg')"></div>
+		</div>
+	</section>
+	<section class="section content-animated-bg">
+		<div class="container is-layout-regular">
+			<div class="portfolio-description is-absolute">
+				<h3 class="title is-spaced is-portfolio-special">Il Cantiere</h3>
+				<a href="http://www.ilcantieresrl.it/" target="_blank" class="link has-animation">Check it out!</a>
+			</div>
+			<div class="portfolio-item" style="background-image:url('img/ilcantiere-fullpage.jpg')"></div>
+		</div>
+	</section>
+	<!-- About -->
+	<section id="about" class="section content-animated-bg">
+		<div class="container">
+			<div class="columns">
+				<div class="column is-offset-1 is-5 content">
+					<h3 class="title is-spaced is-3">
+						<b>About me</b>
+					</h3>
+					<div class="has-green-box">
+						<p>I strongly believe that a well designed user experience can leave its mark and that sometimes it's almost more important than the actual content.
+						</p>
+						<p>I love working in happy, creative and innovative environments. I like to help people get into the digital mindset and open up
+							to the crazy amount of opportunities it makes possibile.</p>
+						<p>Right now I'm collaborating on various projects with the RedLime team in Italy.</p>
+					</div>
+					<h3 class="title is-spaced is-3">
+						<b>Skills</b>
+					</h3>
+					<div class="skill-box">
+						<div class="meter">
+							<p>Sketch</p>
+							<span data-percentage="100%"></span>
+						</div>
+						<div class="meter">
+							<p>HTML & CSS</p>
+							<span data-percentage="100%"></span>
+						</div>
+						<div class="meter">
+							<p>InVision</p>
+							<span data-percentage="90%"></span>
+						</div>
+						<div class="meter">
+							<p>Javascript</p>
+							<span data-percentage="80%"></span>
+						</div>
+						<div class="meter">
+							<p>Photoshop</p>
+							<span data-percentage="70%"></span>
+						</div>
+						<div class="meter">
+							<p>Illustrator</p>
+							<span data-percentage="40%"></span>
+						</div>
+						<div class="meter">
+							<p>After Effects</p>
+							<span data-percentage="30%"></span>
+						</div>
+					</div>
+				</div>
+				<div class="column is-5 about-image">
+					<img src="img/alessandro-verardo-design.png" alt="">
 				</div>
 			</div>
 		</div>
-		<!-- Portfolio -->
-		<div class="content-wrap content-animated-bg">
-			<div class="content content--layout content--layout-1">
-				<img class="content__img" src="img/redlime.jpg">
-				<h3 class="content__title">RedLime</h3>
-				<p class="content__desc">UX Design</br>Frontend Development</p>
-				<a href="https://www.redlime.it/" target="_blank" class="content__link link link--inverted">
-					<span data-letters="Check it out!">Check it out!</span>
-				</a>
+	</section>
+	<!-- Footer -->
+	<section class="hero is-viewheight end">
+		<div class="hero-body has-text-centered columns is-flex is-vcentered">
+			<div class="container">
+				<h1 class="title is-spaced is-big">
+					Thanks for stopping by!
+				</h1>
+				<h2 class="subtitle">
+					PS: Try not to scroll down too fast or you're going to break my triangle :(
+				</h2>
 			</div>
 		</div>
-		<div class="content-wrap content-animated-bg">
-			<div class="content content--layout content--layout-2">
-				<img class="content__img" src="img/imagegroup.jpg">
-				<h3 class="content__title">Image</h3>
-				<p class="content__desc">UX Design</br>Frontend Development</p>
-				<a href="http://www.imagesrl.com/" target="_blank" class="content__link link link--inverted">
-					<span data-letters="Check it out!">Check it out!</span>
-				</a>
+	</section>
+	<footer>
+		<div class="container">
+			<div class="columns">
+				<div class="column is-10 is-offset-1">
+					<p>© 2018 Alessandro Verardo</p>
+					<ul class="social-icons">
+						<li>
+							<a href="https://www.linkedin.com/in/alessandro-verardo-9a062a104/" target="_blank">
+								<img src="img/facebook.svg" alt="Facebook icon">
+							</a>
+						</li>
+						<li>
+							<a href="https://www.linkedin.com/in/alessandro-verardo-9a062a104/" target="_blank">
+								<img src="img/linkedin.svg" alt="LinkedIn icon">
+							</a>
+						</li>
+						<li>
+							<a href="mailto:verardo.ale@hotmail.com?Subject=Ciao!%20ti%20contatto%20dal%20sito">
+								<img src="img/mail.svg" alt="Mail to icon">
+							</a>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</div>
-		<div class="content-wrap content-animated-bg">
-			<div class="content content--layout content--layout-1">
-				<img class="content__img" src="img/ilcantiere.jpg">
-				<h3 class="content__title">IlCantiere</h3>
-				<p class="content__desc">Frontend Development</p>
-				<a href="http://www.ilcantieresrl.it/" target="_blank" class="content__link link link--inverted">
-					<span data-letters="Check it out!">Check it out!</span>
-				</a>
-			</div>
-		</div>
-		<!-- About -->
-		<div id="aboutbio" class="content-wrap content-dark content-top content-animated-bg">
-			<div class="parallax-bg">
-				<div class="parallax-bg__back parallax-bg__back--static"></div>
-				<div class="parallax-bg__back parallax-bg__back--mover"></div>
-				<div class="parallax-bg__front"></div>
-			</div>
-			<div class="content__bio">
-				<h4>About me</h4>
-				<p>Ever since I was a child I've always been passionate about technology and design. Born in 1992, as a kid, I was often
-					confused between graphics and computer science, until I've found a way to follow both,
-					<b>at the same time</b>. I enjoy designing unique experiences
-					<b>to entertain</b> those who then use them. At the moment I work in the
-					<a class="link link--classic" target="_blank" href="https://www.redlime.it/">RedLime</a> team. Here I work at close contact with clients, helping them develop their ideas and spreading them in
-					the online commuinity.</p>
-				<h4>Skills</h4>
-				<p>I have a solid knowledge of <b>HTML, CSS</b> and <b>JS</b>. I grew up as a programmer and then moved to the design world. I've worked
-					on several projects as <strong>Web Designer</strong> and <strong>UX Designer</strong>, I love 
-					<a class="link link--classic" target="_blank" href="https://www.sketchapp.com/">Sketch</a> but I also know how to use the Adobe suite. I often
-					deal with Web Marketing projects, helping the client to grow online, thanks to tailor-made strategies. I like to work
-					both alone and in team, depending on the project.</p>
-				<h4>Contact</h4>
-				<a style="margin-left: -0.4em;" href="mailto:verardo.ale@hotmail.com?Subject=Ciao!%20ti%20contatto%20dal%20sito" class="content__link link">
-					<span data-letters="Email">Email</span>
-				</a>
-				<a href="https://www.linkedin.com/in/alessandro-verardo-9a062a104/" target="_blank" class="content__link link">
-					<span data-letters="Linkedin">Linkedin</span>
-				</a>
-			</div>
-		</div>
-		<div class="content-wrap content-colored end">
-			<div class="content content--hero">
-				<h4 class="content__h1">Thanks for stopping by!</h4>
-				<h5 class="content__subtitle">PS: Try not to scroll down too fast or you're going to break my triangle :(</h5>
-			</div>
-		</div>
-	</main>
+	</footer>
 	<script src="js/imagesloaded.pkgd.min.js"></script>
 	<script src="js/anime.min.js"></script>
 	<script src="js/scrollMonitor.js"></script>

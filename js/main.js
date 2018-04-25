@@ -1,152 +1,22 @@
 {
-    // Helper vars and functions.
-    const extend = function(a, b) {
-        for (let key in b) {
-            if (b.hasOwnProperty(key)) {
-                a[key] = b[key];
-            }
-        }
-        return a;
-    };
 
-    // from http://www.quirksmode.org/js/events_properties.html#position
-    const getMousePos = function(ev) {
-        let posx = 0;
-        let posy = 0;
-        if (!ev) ev = window.event;
-        if (ev.pageX || ev.pageY) {
-            posx = ev.pageX;
-            posy = ev.pageY;
-        } else if (ev.clientX || ev.clientY) {
-            posx =
-                ev.clientX +
-                document.body.scrollLeft +
-                document.documentElement.scrollLeft;
-            posy =
-                ev.clientY +
-                document.body.scrollTop +
-                document.documentElement.scrollTop;
-        }
-        return { x: posx, y: posy };
-    };
-
-    const TiltObj = function(el, options) {
-        this.el = el;
-        this.options = extend({}, this.options);
-        extend(this.options, options);
-        this.DOM = {};
-        this.DOM.img = this.el.querySelector('.content__img');
-        this.DOM.title = this.el.querySelector('.content__title');
-        this._initEvents();
-    };
-
-    TiltObj.prototype.options = {
-        movement: {
-            img: { translation: { x: -40, y: -40 } },
-            title: { translation: { x: 20, y: 20 } }
-        }
-    };
-
-    TiltObj.prototype._initEvents = function() {
-        this.mouseenterFn = ev => {
-            anime.remove(this.DOM.img);
-            anime.remove(this.DOM.title);
-        };
-
-        this.mousemoveFn = ev => {
-            requestAnimationFrame(() => this._layout(ev));
-        };
-
-        this.mouseleaveFn = ev => {
-            requestAnimationFrame(() => {
-                anime({
-                    targets: [this.DOM.img, this.DOM.title],
-                    duration: 1500,
-                    easing: 'easeOutElastic',
-                    elasticity: 400,
-                    translateX: 0,
-                    translateY: 0
-                });
-            });
-        };
-
-        this.el.addEventListener('mousemove', this.mousemoveFn);
-        this.el.addEventListener('mouseleave', this.mouseleaveFn);
-        this.el.addEventListener('mouseenter', this.mouseenterFn);
-    };
-
-    TiltObj.prototype._layout = function(ev) {
-        // Mouse position relative to the document.
-        const mousepos = getMousePos(ev);
-        // Document scrolls.
-        const docScrolls = {
-            left:
-                document.body.scrollLeft + document.documentElement.scrollLeft,
-            top: document.body.scrollTop + document.documentElement.scrollTop
-        };
-        const bounds = this.el.getBoundingClientRect();
-        // Mouse position relative to the main element (this.DOM.el).
-        const relmousepos = {
-            x: mousepos.x - bounds.left - docScrolls.left,
-            y: mousepos.y - bounds.top - docScrolls.top
-        };
-
-        // Movement settings for the animatable elements.
-        const t = {
-            img: this.options.movement.img.translation,
-            title: this.options.movement.title.translation
-        };
-
-        const transforms = {
-            img: {
-                x:
-                    (-1 * t.img.x - t.img.x) / bounds.width * relmousepos.x +
-                    t.img.x,
-                y:
-                    (-1 * t.img.y - t.img.y) / bounds.height * relmousepos.y +
-                    t.img.y
-            },
-            title: {
-                x:
-                    (-1 * t.title.x - t.title.x) /
-                        bounds.width *
-                        relmousepos.x +
-                    t.title.x,
-                y:
-                    (-1 * t.title.y - t.title.y) /
-                        bounds.height *
-                        relmousepos.y +
-                    t.title.y
-            }
-        };
-        this.DOM.img.style.WebkitTransform = this.DOM.img.style.transform =
-            'translateX(' +
-            transforms.img.x +
-            'px) translateY(' +
-            transforms.img.y +
-            'px)';
-        this.DOM.title.style.WebkitTransform = this.DOM.title.style.transform =
-            'translateX(' +
-            transforms.title.x +
-            'px) translateY(' +
-            transforms.title.y +
-            'px)';
-    };
-
+    // Variables
     const DOM = {};
     DOM.svg = document.querySelector('.morph');
     DOM.shapeEl = DOM.svg.querySelector('polygon');
     DOM.contentElems = Array.from(
         document.querySelectorAll('.content-animated-bg')
     );
-    DOM.contentLinks = Array.from(document.querySelectorAll('.content__link'));
     DOM.footer = document.querySelector('.end');
+    DOM.bio = document.querySelector('#bio');
+    DOM.skillset = document.querySelector('#about');
+    DOM.skillbars = document.querySelectorAll('.skill-box .meter>span');
     const contentElemsTotal = DOM.contentElems.length;
     const shapes = [
         {
             points:
-                '700,84.4 1047.1,685.6 352.9,685.6 352.9,685.6 352.9,685.6 352.9,685.6',
-            scaleX: 0.8,
+                '700.5 38 1048 733 353 733',
+            scaleX: 0.9,
             scaleY: 0.9,
             rotate: 0,
             tx: 0,
@@ -171,9 +41,9 @@
         },
         {
             points:
-                '700,84.4 1047.1,685.6 352.9,685.6 352.9,685.6 352.9,685.6 352.9,685.6',
+                '700.5 38 1048 733 353 733',
             scaleX: 0.8,
-            scaleY: 0.9,
+            scaleY: 0.8,
             rotate: 180,
             tx: -300,
             ty: 100,
@@ -197,12 +67,12 @@
         },
         {
             points:
-                '983.4,101.6 779,385 983.4,668.4 416.6,668.4 611,388 416.6,101.9',
+                '700.5 38 1048 733 353 733',
             scaleX: 1,
             scaleY: 1,
-            rotate: -45,
-            tx: 150,
-            ty: -50,
+            rotate: 360,
+            tx: 250,
+            ty: 20,
             loop: false,
             direction: 'alternate',
             fill: {
@@ -223,7 +93,33 @@
         },
         {
             points:
-                '700,84.4 1047.1,685.6 352.9,685.6 352.9,685.6 352.9,685.6 352.9,685.6',
+                '700.5 38 1048 733 353 733',
+            scaleX: 0.9,
+            scaleY: 0.9,
+            rotate: 540,
+            tx: -200,
+            ty: 0,
+            loop: false,
+            direction: 'alternate',
+            fill: {
+                color: 'none',
+                duration: 500,
+                easing: 'linear'
+            },
+            animation: {
+                points: {
+                    duration: 500,
+                    easing: 'easeOutExpo'
+                },
+                svg: {
+                    duration: 1500,
+                    easing: 'easeOutElastic'
+                }
+            }
+        },
+        {
+            points:
+                '700.5 12 43 733 53 733',
             scaleX: 0,
             scaleY: 0,
             rotate: 200,
@@ -249,33 +145,32 @@
         },
         {
             points:
-                '700,84.4 1047.1,685.6 352.9,685.6 352.9,685.6 352.9,685.6 352.9,685.6',
-            scaleX: 0.55,
+                '700.5 38 1048 733 353 733',
+            scaleX: 0.6,
             scaleY: 0.6,
-            rotate: 3600,
+            rotate: 720,
             tx: 0,
             ty: -50,
-            loop: true,
             direction: 'alternate',
             fill: {
                 color: 'none',
-                duration: 50000,
+                duration: 500,
                 easing: 'linear'
             },
             animation: {
                 points: {
-                    duration: 50000,
+                    duration: 5000,
                     easing: 'easeOutExpo'
                 },
                 svg: {
-                    duration: 150000,
+                    duration: 15000,
                     easing: 'easeOutExpo'
                 }
             }
         },
         {
             points:
-                '700,84.4 1047.1,685.6 352.9,685.6 352.9,685.6 352.9,685.6 352.9,685.6',
+                '700.5 38 1048 733 353 733',
             scaleX: 0,
             scaleY: 0,
             rotate: 200,
@@ -302,7 +197,9 @@
     ];
     let step;
 
-    const initShapeEl = function() {
+    // Shape Init
+
+    const initShapeEl = function () {
         anime.remove(DOM.svg);
         anime({
             targets: DOM.svg,
@@ -318,13 +215,49 @@
         });
     };
 
-    const createScrollWatchers = function() {
+    // Scroll Watchers
+
+    const createScrollWatchers = function () {
+
+        const biowatcher = scrollMonitor.create(DOM.bio);
+        const skillwatcher = scrollMonitor.create(DOM.skillset, { top: -500 });
+
+        biowatcher.enterViewport(function () {
+            document.getElementById('alessandro-doodle').play();
+        });
+
+        biowatcher.exitViewport(function () {
+            document.getElementById('alessandro-doodle').pause();
+        });
+
+
+        skillwatcher.enterViewport(function () {
+            anime.remove(DOM.skillbars);
+            anime({
+                targets: DOM.skillbars,
+                width: function (el) {
+                    return el.getAttribute('data-percentage');
+                },
+                delay: function (el, i, l) {
+                    return i * 100;
+                }
+            });
+        });
+
+        skillwatcher.exitViewport(function () {
+            anime.remove(DOM.skillbars);
+            anime({
+                targets: DOM.skillbars,
+                width: 0
+            });
+        });
+
         DOM.contentElems.forEach((el, pos) => {
             const scrollElemToWatch = pos ? DOM.contentElems[pos] : DOM.footer;
             pos = pos ? pos : contentElemsTotal;
             const watcher = scrollMonitor.create(scrollElemToWatch, -350);
 
-            watcher.enterViewport(function() {
+            watcher.enterViewport(function () {
                 step = pos;
                 anime.remove(DOM.shapeEl);
                 anime({
@@ -358,7 +291,7 @@
                 });
             });
 
-            watcher.exitViewport(function() {
+            watcher.exitViewport(function () {
                 const idx = !watcher.isAboveViewport ? pos - 1 : pos + 1;
 
                 if (idx <= contentElemsTotal && step !== idx) {
@@ -396,75 +329,31 @@
                     });
                 }
             });
+
         });
     };
 
-    var bodyEl = document.body,
-        docElem = window.document.documentElement,
-        win = { width: window.innerWidth, height: window.innerHeight },
-        parallaxbg = document.querySelector('.parallax-bg__back--mover'),
-        biocontainer = document.querySelector('#aboutbio');
+    // Initialization
 
-    // from http://www.sberry.me/articles/javascript-event-throttling-debouncing
-    function throttle(fn, delay) {
-        var allowSample = true;
-
-        return function(e) {
-            if (allowSample) {
-                allowSample = false;
-                setTimeout(function() {
-                    allowSample = true;
-                }, delay);
-                fn(e);
-            }
-        };
-    }
-
-    biocontainer.addEventListener(
-        'mousemove',
-        throttle(function(ev) {
-            var xVal = -1 / (win.height / 2) * ev.clientY + 1,
-                yVal = 1 / (win.width / 2) * ev.clientX - 1,
-                transX = 20 / win.width * ev.clientX - 10,
-                transY = 20 / win.height * ev.clientY - 10,
-                transZ = 100 / win.height * ev.clientY - 50;
-            console.log('LUL');
-            parallaxbg.style.WebkitTransform =
-                'perspective(1000px) translate3d(' +
-                transX +
-                'px,' +
-                transY +
-                'px,' +
-                transZ +
-                'px) rotate3d(' +
-                xVal +
-                ',' +
-                yVal +
-                ',0,2deg)';
-            parallaxbg.style.transform =
-                'perspective(1000px) translate3d(' +
-                transX +
-                'px,' +
-                transY +
-                'px,' +
-                transZ +
-                'px) rotate3d(' +
-                xVal +
-                ',' +
-                yVal +
-                ',0,2deg)';
-        }, 100)
-    );
-
-    const init = function() {
+    const init = function () {
+        var svgAttributes = anime({
+            targets: '#svgLoader polygon',
+            points: '64 104.9849546 8.574 104.9849546 35.4419879 59.1565245 64 8.984954583 92.3275224 59.1565245 119.426 104.9849546',
+            easing: 'easeInOutExpo',
+            loop: true,
+            direction: 'alternate'
+        });
         imagesLoaded(document.body, () => {
             initShapeEl();
             createScrollWatchers();
-            Array.from(document.querySelectorAll('.content--layout')).forEach(
-                el => new TiltObj(el)
-            );
-            // Remove loading class from body
-            document.body.classList.remove('loading');
+            // Remove page loader
+            setTimeout(function () {
+                document.querySelector('.is-loading').classList.add('is-transparent');
+                anime.remove('#svgLoader polygon');
+            }, 1000);
+            setTimeout(function () {
+                document.querySelector('.is-loading').classList.add('is-hidden');
+            }, 1500);
         });
     };
 
