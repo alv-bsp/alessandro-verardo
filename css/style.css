@@ -1,3 +1,10 @@
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css?family=Didact+Gothic');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+/* General */
+
 *,
 *::after,
 *::before {
@@ -50,7 +57,7 @@ a:focus {
 p,
 a,
 h2.subtitle {
-    font-family: 'Didactic Gothic', sans-serif;
+    font-family: 'Didact Gothic', sans-serif;
     font-size: 1.2rem;
 }
 
@@ -339,6 +346,7 @@ header.is-fixed {
 
 .meter>p {
     position: absolute;
+    width: 150px;
     top: -10px;
     left: -30px;
     z-index: 1;
