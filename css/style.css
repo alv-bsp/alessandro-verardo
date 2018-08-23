@@ -144,9 +144,15 @@ header.is-fixed {
     width: 64px;
     height: 64px;
     background-color: var(--svg-color);
+    background-image: -webkit-linear-gradient( 315deg, #81FBB8 10%, #28C76F 100%);
+    background-image: -o-linear-gradient( 315deg, #81FBB8 10%, #28C76F 100%);
     background-image: linear-gradient( 135deg, #81FBB8 10%, #28C76F 100%);
     border-radius: 35px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
     transition: all 200ms ease;
 }
 
@@ -166,6 +172,8 @@ header.is-fixed {
 .btn-mail:hover p {
     margin: auto auto auto 36px;
     opacity: 1;
+    -webkit-transition: opacity 100ms ease 300ms, margin 20ms linear 300ms, width 0ms linear 300ms;
+    -o-transition: opacity 100ms ease 300ms, margin 20ms linear 300ms, width 0ms linear 300ms;
     transition: opacity 100ms ease 300ms, margin 20ms linear 300ms, width 0ms linear 300ms;
     width: auto;
 }
@@ -510,6 +518,8 @@ header.is-fixed {
     display: block;
     height: 100%;
     background-color: var(--svg-color);
+    background-image: -webkit-linear-gradient( 315deg, #81FBB8 10%, #28C76F 100%);
+    background-image: -o-linear-gradient( 315deg, #81FBB8 10%, #28C76F 100%);
     background-image: linear-gradient( 135deg, #81FBB8 10%, #28C76F 100%);
     position: relative;
     overflow: hidden;
