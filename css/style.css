@@ -719,6 +719,9 @@ footer .column p {
     h2.subtitle {
         padding: 0 1rem;
     }
+    h3.title.is-portfolio-special {
+        font-size: 2.6rem;
+    }
     /* Helpers */
     .columns {
         margin-left: 0;
