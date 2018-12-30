@@ -211,10 +211,6 @@ header.is-fixed {
     background-size: cover;
 }
 
-.has-background-light {
-    background-color: rgba(119, 119, 119, .1);
-}
-
 .has-background-gradient {
     background-color: var(--svg-color);
 }
@@ -781,3 +777,28 @@ footer .column p {
         margin-top: 1rem;
     }
 }
+
+
+
+/* .cursor-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+#cursor {
+    width: 0;
+    height: 0;
+    transform: rotate(-20deg);
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid var(--svg-color);
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin: 0;
+    pointer-events: none;
+} */
