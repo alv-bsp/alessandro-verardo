@@ -203,14 +203,14 @@ a:focus {
 
 @media screen and (max-width: 480px) and (orientation: portrait) {
   .trigger {
-    filter: blur(0.3px);
+    filter: blur(0.2px);
   }
   .content {
     padding: 2rem;
   }
   .text {
     max-width: 100%;
-    font-size: 9vw;
+    font-size: 8.6vw;
   }
   .logo {
     left: 2rem;
@@ -224,9 +224,6 @@ a:focus {
 @media screen and (max-width: 320px) and (orientation: portrait) {
   .text {
     font-size: 8vw;
-  }
-  .trigger {
-    filter: blur(0.2px);
   }
 }
 
