@@ -151,24 +151,6 @@ a:focus {
   height: 100%;
 }
 
-@media (hover: none) and (pointer: coarse) {
-  .trigger {
-    cursor: pointer;
-    pointer-events: initial;
-    opacity: 1;
-    color: #fff;
-    filter: blur(0.6px);
-  }
-  .trigger:nth-child(odd) {
-    text-shadow: 0 0 10px var(--color-secondary),
-      0 0 20px var(--color-secondary), 0 0 40px var(--color-secondary);
-  }
-  .trigger:nth-child(even) {
-    text-shadow: 0 0 10px var(--color-primary), 0 0 20px var(--color-primary),
-      0 0 40px var(--color-primary);
-  }
-}
-
 @media screen and (max-width: 1024px) {
   .item__fig {
     width: 32vw;
@@ -192,15 +174,16 @@ a:focus {
   }
   .logo {
     left: 10vw;
+    max-width: 40px;
   }
   .item__fig {
-    width: 40vw;
+    width: 65vw;
   }
 }
 
 @media screen and (max-width: 480px) and (orientation: portrait) {
-  .trigger {
-    filter: blur(0.3px);
+  .trigger::after {
+    height: 1px;
   }
   .content {
     padding: 2rem;
@@ -213,17 +196,11 @@ a:focus {
     left: 2rem;
     top: 2rem;
   }
-  .item__fig {
-    width: 40vw;
-  }
 }
 
 @media screen and (max-width: 320px) and (orientation: portrait) {
   .text {
     font-size: 8vw;
-  }
-  .trigger {
-    filter: blur(0.2px);
   }
 }
 
