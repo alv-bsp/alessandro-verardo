@@ -168,9 +168,20 @@ a:focus {
 }
 
 @media screen and (max-width: 768px) and (orientation: portrait) {
+  .item__fig {
+    width: 32vw;
+  }
+}
+
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  body {
+    max-height: 100vh;
+    overflow: hidden;
+  }
   .text {
     max-width: 80vw;
     font-size: 7.2vw;
+    padding-bottom: 15vh;
   }
   .logo {
     left: 10vw;
@@ -190,7 +201,7 @@ a:focus {
   }
   .text {
     max-width: 100%;
-    font-size: 9vw;
+    font-size: 8vw;
   }
   .logo {
     left: 2rem;
