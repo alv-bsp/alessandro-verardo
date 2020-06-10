@@ -168,31 +168,27 @@ a:focus {
 }
 
 @media screen and (max-width: 768px) and (orientation: portrait) {
-  .item__fig {
-    width: 32vw;
-  }
-}
-
-@media screen and (max-width: 768px) and (orientation: portrait) {
-  body {
-    max-height: 100vh;
-    overflow: hidden;
+  .content {
+    height: calc(var(--vh, 1vh) * 100);
   }
   .text {
     max-width: 80vw;
     font-size: 7.2vw;
-    padding-bottom: 15vh;
+    padding: 15vh 0;
   }
   .logo {
     left: 10vw;
     max-width: 40px;
   }
   .item__fig {
-    width: 65vw;
+    width: 50vw;
   }
 }
 
 @media screen and (max-width: 480px) and (orientation: portrait) {
+  .item__fig {
+    width: 90vw;
+  }
   .trigger::after {
     height: 1px;
   }
