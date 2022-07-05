@@ -1,0 +1,126 @@
+extends ../base.pug
+
+//- VARIABLES -
+block variables
+  -
+    var template = 'home'
+
+    var hero = document.body[0].primary;
+    var intro = document.body[2].primary;
+    var description = document.body[3].primary;
+    var requirements = document.body[6].primary;
+    var requirementsBulletPoints = document.body[6].items;
+    var selection = document.body[7].primary;
+
+    var marquee = [document.body[1].primary, document.body[9].primary];
+    var generic = [document.body[4].primary, document.body[8].primary];
+    var cta = [document.body[5].primary, document.body[10].primary];
+
+
+//- MIXINS -
+mixin marquee(list)
+  .marquee
+    .marquee__stripe
+      each item in list
+        span= item
+      each item in list
+        span= item
+      each item in list
+        span= item
+    .marquee__stripe.absolute.left-0.top-0.animate-marquee2
+      each item in list
+        span= item
+      each item in list
+        span= item
+      each item in list
+        span= item
+
+mixin ctaCard(args)
+  .card-cta
+    if args.text
+      p.title= args.text
+    if args.logo.url
+      img.desktop(data-src=args.logo.url, alt=args.logo.alt)
+    a.button.button--form.my-6(href='/application')= args.button_label
+    p.deadline-text.text-black
+
+//- CONTENT -
+block content
+  #particles-js
+  main.page.homepage
+    .page__wrapper
+      //- HERO SECTION -
+      section.section.hero
+        .section__inner.container
+          h1= hero.title
+          p.highlight= hero.subtitle
+          a.button.button--form.button--light(href='/application')= hero.button_label
+          p.deadline-text
+
+      //- FIRST MARQUEE -
+      +marquee(marquee[0])
+
+      //- INTRO SECTION -
+      section.section.intro
+        .section__inner.container
+          .title!= prismicH.asHTML(intro.title)
+          != prismicH.asHTML(intro.paragraph_1)
+          p.highlight= intro.highlight_text
+          != prismicH.asHTML(intro.paragraph_2)
+
+      //- DESCRIPTION SECTION -
+      section.section.description.gradient-bg
+        .section__inner.container
+          .max-w-screen-lg
+            p.tagline= description.tagline
+            p.title= description.title
+            != prismicH.asHTML(description.paragraph)
+
+      //- FIRST GENERIC SECTION -
+      section.section
+        .section__inner.container
+          .max-w-screen-md
+            p.tagline= generic[0].tagline
+            p.title= generic[0].title
+            != prismicH.asHTML(generic[0].paragraph)
+
+      //- FIRST CTA -
+      .card-wrapper
+        +ctaCard(cta[0])
+
+      //- REQUIREMENTS SECTION -
+      section#requirements.section.requirements
+        .section__inner.container
+          .col
+            p.tagline= requirements.tagline
+            p.title= requirements.title
+            ul
+              each point in requirementsBulletPoints
+                li= point.bullet_text
+          .col
+            p.tagline= requirements.side_tagline
+            != prismicH.asHTML(requirements.side_text)
+
+      //- SELECTION SECTION -
+      section.section.selection.gradient-bg
+        .section__inner.container
+          .col
+            p.tagline= selection.tagline
+            p.title= selection.title
+          .col
+            != prismicH.asHTML(selection.schedule_description)
+
+      //- SECOND GENERIC SECTION -
+      section.section
+        .section__inner.container
+          .max-w-screen-md
+            p.tagline= generic[1].tagline
+            p.title= generic[1].title
+            != prismicH.asHTML(generic[1].paragraph)
+
+      //- SECOND MARQUEE -
+      +marquee(marquee[1])
+
+      //- SECOND CTA -
+      .card-wrapper
+        +ctaCard(cta[1])

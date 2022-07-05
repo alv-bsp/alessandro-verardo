@@ -1,0 +1,40 @@
+@font-face {
+  font-family: 'Inter';
+  font-weight: 300;
+  src: url('../fonts/Inter-Light.ttf');
+}
+@font-face {
+  font-family: 'Inter';
+  font-weight: 600;
+  src: url('../fonts/Inter-SemiBold.ttf');
+}
+@font-face {
+  font-family: 'Inter';
+  font-weight: 700;
+  src: url('../fonts/Inter-Bold.ttf');
+}
+@font-face {
+  font-family: 'Inter';
+  font-weight: 800;
+  src: url('../fonts/Inter-ExtraBold.ttf');
+}
+@font-face {
+  font-family: 'Trispace Expanded';
+  font-weight: 700;
+  src: url('../fonts/Trispace-Expanded-Bold.ttf');
+}
+@font-face {
+  font-family: 'Trispace Expanded';
+  font-weight: 600;
+  src: url('../fonts/Trispace-Expanded-SemiBold.ttf');
+}
+@font-face {
+  font-family: 'Trispace Expanded';
+  font-weight: 300;
+  src: url('../fonts/Trispace-Expanded-Light.ttf');
+}
+@font-face {
+  font-family: 'Trispace SemiCondensed';
+  font-weight: 300;
+  src: url('../fonts/Trispace-SemiCondensed-Light.ttf');
+}

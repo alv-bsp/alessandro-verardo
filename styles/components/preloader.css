@@ -1,0 +1,20 @@
+@layer components {
+  .preloader {
+    @apply z-50 fixed inset-0 space-y-4 flex flex-col bg-blackitems-center justify-center;
+    &__text {
+      @apply leading-none;
+      & span {
+        @apply inline-block overflow-hidden;
+        & span {
+          @apply TE-SB12 md:TE-SB18 uppercase;
+        }
+      }
+    }
+    &__number {
+      @apply overflow-hidden;
+      &__text {
+        @apply TE-SB12 text-white inline-block;
+      }
+    }
+  }
+}

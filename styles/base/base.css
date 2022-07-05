@@ -1,0 +1,24 @@
+@layer base {
+  * {
+    @apply before:content-none after:content-none;
+  }
+
+  body {
+    @apply overflow-x-hidden bg-black;
+  }
+
+  a.disabled {
+    @apply pointer-events-none;
+  }
+
+  img {
+    @apply h-full w-full;
+  }
+
+  input {
+    -webkit-user-select: text; /* Chrome, Opera, Safari */
+    -moz-user-select: text; /* Firefox 2+ */
+    -ms-user-select: text; /* IE 10+ */
+    user-select: text; /* Standard syntax */
+  }
+}

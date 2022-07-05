@@ -1,0 +1,63 @@
+block variables
+
+doctype html
+html(lang='en')
+  head(class=isDesktop ? 'desktop' : isTablet ? 'tablet' : isPhone ? 'phone' : '')
+
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(
+      http-equiv='Content-Security-Policy',
+      content='default-src *; img-src * \'self\' data: https:; script-src \'self\' \'unsafe-inline\' \'unsafe-eval\' https://cdn.cookielaw.org/consent/ *; style-src  \'self\' \'unsafe-inline\' *'
+    )
+    base(href='/')
+
+    title= metadata.event_title
+
+    meta(name='description', content=metadata.description)
+
+    link(rel='apple-touch-icon', sizes='180x180', href='/apple-touch-icon.png')
+    link(
+      rel='icon',
+      type='image/png',
+      sizes='32x32',
+      href='/favicon-32x32.png'
+    )
+    link(
+      rel='icon',
+      type='image/png',
+      sizes='16x16',
+      href='/favicon-16x16.png'
+    )
+    link(rel='manifest', href='/site.webmanifest')
+    link(rel='mask-icon', href='/safari-pinned-tab.svg', color='#da532c')
+    meta(name='msapplication-TileColor', content='#da532c')
+    meta(name='theme-color', content='#ffffff')
+
+    link(rel="stylesheet" href="main.css")
+
+    meta(property='og:type', content='website')
+
+    meta(property='og:type', content='website')
+    meta(property='og:title', content=metadata.event_title)
+    meta(property='og:description', content=metadata.description)
+    meta(
+      property='og:image',
+      content=metadata.og_image ? metadata.og_image.url : ''
+    )
+
+    meta(name='twitter:card', content='summary_large_image')
+    meta(name='twitter:title', content=metadata.event_title)
+    meta(name='twitter:description', content=metadata.description)
+    meta(
+      name='twitter:image',
+      content=metadata.og_image ? metadata.og_image.url : ''
+    )
+
+  body
+    include ./partials/preloader
+
+    #content.content(data-template=template)
+      block content
+
+    script(src="main.js")
