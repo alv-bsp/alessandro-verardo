@@ -1,0 +1,51 @@
+@font-face {
+  font-family: "Axiforma";
+  src: url("Axiforma-SemiBold.woff2") format("woff2"),
+    url("Axiforma-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #fff;
+  display: flex;
+  height: 100vh;
+}
+
+.wrapper {
+  max-width: 768px;
+  padding: 0 32px;
+  margin: auto;
+}
+
+.body-text {
+  text-align: center;
+  font-family: "Axiforma";
+  font-weight: 600;
+  font-style: normal;
+  font-size: 32px;
+  line-height: 130%;
+  letter-spacing: -0.015em;
+  color: #9e9ea5;
+}
+
+.body-text br {
+  display: none;
+}
+
+@media only screen and (max-width: 480px) {
+  .body-text {
+    font-size: 24px;
+    text-align: left;
+  }
+
+  .body-text br {
+    display: block;
+  }
+}
