@@ -1,0 +1,313 @@
+{
+	"intro": {
+		"name": "Alessandro",
+		"headline": "Product Designer",
+		"bio": "I like creating things. I've spent the last decade between product design, web platforms, tooling and optimisation. I have an obsession with automation and simplifying things. I believe good design is invisible, it just works. I have also have way too many hobbies."
+	},
+	"location": {
+		"label": "Somewhere near Lake Como, Italy",
+		"coordinates": [
+			44.34,
+			10.99
+		]
+	},
+	"nowPlaying": {
+		"type": "spotify",
+		"embedUrl": "https://open.spotify.com/embed/album/4xmCnIcDIODd6s6gIOgzQs?utm_source=generator"
+	},
+	"nowWatching": {
+		"title": "Ted Lasso",
+		"poster": "/images/ted-lasso.jpg",
+		"status": "watching",
+		"oneLiner": "Football is life."
+	},
+	"interests": [
+		{
+			"emoji": "🌿",
+			"label": "Houseplants"
+		},
+		{
+			"emoji": "🏠",
+			"label": "Smart Home"
+		},
+		{
+			"emoji": "🧳",
+			"label": "Travel"
+		},
+		{
+			"emoji": "🏍️",
+			"label": "Motorcycles"
+		},
+		{
+			"emoji": "🏄",
+			"label": "Surf"
+		},
+		{
+			"emoji": "🏂",
+			"label": "Snowboard"
+		},
+		{
+			"emoji": "🎨",
+			"label": "Design"
+		},
+		{
+			"emoji": "💻",
+			"label": "Technology"
+		},
+		{
+			"emoji": "🚀",
+			"label": "Space"
+		},
+		{
+			"emoji": "🪵",
+			"label": "Woodworking"
+		},
+		{
+			"emoji": "🖨️",
+			"label": "3D Printing"
+		},
+		{
+			"emoji": "🕹️",
+			"label": "Street Fighter"
+		}
+	],
+	"socials": [
+		{
+			"platform": "LinkedIn",
+			"url": "https://linkedin.com/in/datguyale"
+		},
+		{
+			"platform": "Twitter",
+			"url": "https://x.com/datguyale"
+		},
+		{
+			"platform": "Instagram",
+			"url": "https://www.instagram.com/datguyale/"
+		},
+		{
+			"platform": "Email",
+			"url": "mailto:alessandro.verardo92@gmail.com"
+		}
+	],
+	"placesExplored": [
+		{
+			"name": "Italy",
+			"lat": 42.50,
+			"lng": 12.49
+		},
+		{
+			"name": "France",
+			"lat": 46.60,
+			"lng": 2.35
+		},
+		{
+			"name": "Netherlands",
+			"lat": 52.37,
+			"lng": 4.90
+		},
+		{
+			"name": "Germany",
+			"lat": 51.16,
+			"lng": 10.45
+		},
+		{
+			"name": "Austria",
+			"lat": 47.52,
+			"lng": 14.55
+		},
+		{
+			"name": "Croatia",
+			"lat": 44.50,
+			"lng": 15.98
+		},
+		{
+			"name": "Norway",
+			"lat": 60.47,
+			"lng": 8.47
+		},
+		{
+			"name": "Scotland",
+			"lat": 56.49,
+			"lng": -4.20
+		},
+		{
+			"name": "England",
+			"lat": 52.35,
+			"lng": -1.17
+		},
+		{
+			"name": "Hungary",
+			"lat": 47.50,
+			"lng": 19.04
+		},
+		{
+			"name": "Greece",
+			"lat": 38.90,
+			"lng": 23.73
+		},
+		{
+			"name": "Spain",
+			"lat": 40.41,
+			"lng": -3.70
+		},
+		{
+			"name": "Portugal",
+			"lat": 39.40,
+			"lng": -8.22
+		},
+		{
+			"name": "Namibia",
+			"lat": -22.56,
+			"lng": 17.08
+		},
+		{
+			"name": "Botswana",
+			"lat": -22.33,
+			"lng": 24.68
+		},
+		{
+			"name": "Canary Islands",
+			"lat": 28.10,
+			"lng": -15.40
+		},
+		{
+			"name": "Virgin Islands",
+			"lat": 18.34,
+			"lng": -64.93
+		},
+		{
+			"name": "Mauritius",
+			"lat": -20.35,
+			"lng": 57.55
+		},
+		{
+			"name": "Dominican Republic",
+			"lat": 18.74,
+			"lng": -70.16
+		},
+		{
+			"name": "Los Angeles",
+			"lat": 34.05,
+			"lng": -118.24
+		},
+		{
+			"name": "San Francisco",
+			"lat": 37.77,
+			"lng": -122.42
+		},
+		{
+			"name": "New York",
+			"lat": 40.71,
+			"lng": -74.01
+		},
+		{
+			"name": "Miami",
+			"lat": 25.76,
+			"lng": -80.19
+		},
+		{
+			"name": "Las Vegas",
+			"lat": 36.17,
+			"lng": -115.14
+		},
+		{
+			"name": "Vancouver",
+			"lat": 49.28,
+			"lng": -123.12
+		},
+		{
+			"name": "Indonesia",
+			"lat": -2.55,
+			"lng": 118.01
+		},
+		{
+			"name": "Thailand",
+			"lat": 15.87,
+			"lng": 100.99
+		},
+		{
+			"name": "Sydney",
+			"lat": -33.87,
+			"lng": 151.21
+		},
+		{
+			"name": "Melbourne",
+			"lat": -37.81,
+			"lng": 144.96
+		},
+		{
+			"name": "Cairns",
+			"lat": -16.92,
+			"lng": 145.77
+		},
+		{
+			"name": "New Zealand",
+			"lat": -40.90,
+			"lng": 174.89
+		},
+		{
+			"name": "Japan",
+			"lat": 36.20,
+			"lng": 138.25
+		},
+		{
+			"name": "Hawaii",
+			"lat": 20.80,
+			"lng": -156.33
+		}
+	],
+	"work": [
+		{
+			"company": "WeTransfer",
+			"role": "Creative Studio",
+			"period": "2024 - Present",
+			"logo": "/images/wetransfer.svg",
+			"invertLogo": true,
+			"summary": "Designing and producing Wallpapers, the full-screen creative ad format seen by millions during file transfers. Working with brands like Apple, Coca-Cola, Chanel, Ford, Red Bull, Universal and many more. Managing campaigns end-to-end across creative formats, with a huge focus on streamlining and improving tools for creative production."
+		},
+		{
+			"company": "Evernote",
+			"role": "Design Engineer",
+			"period": "2022 – 2024",
+			"logo": "/images/evernote.svg",
+			"summary": "Led the complete redesign and redevelopment of the Evernote website, from design to code. Drove new user acquisition efforts and ran onboarding flow experiments to improve conversion."
+		},
+		{
+			"company": "Bending Spoons",
+			"role": "Team Lead",
+			"period": "2021 – 2022",
+			"logo": "/images/bendings.svg",
+			"invertLogo": true,
+			"summary": "Led a platform team designing and shipping websites and web experiences across Bending Spoons' portfolio of products. Optimising costs and tooling."
+		},
+		{
+			"company": "Bending Spoons",
+			"role": "Product Designer",
+			"period": "2019 – Present",
+			"logo": "/images/bendings.svg",
+			"invertLogo": true,
+			"summary": "Joined as Product Designer, working across multiple apps in the Bending Spoons ecosystem. Mobile-first design, rapid iteration, data-driven decisions."
+		},
+		{
+			"company": "Awwwards",
+			"role": "Young Jury Member",
+			"period": "2017 – 2020",
+			"logo": "/images/awwwards.svg",
+			"invertLogo": true,
+			"summary": "Selected as a member of the Awwwards Young Jury, reviewing and judging websites submitted to one of the most prestigious web design award platforms."
+		},
+		{
+			"company": "Freelance",
+			"role": "Product / Web Designer",
+			"period": "2017 – 2019",
+			"summary": "Independent design work spanning branding, web design, and product strategy for various clients and startups."
+		},
+		{
+			"company": "RedLime",
+			"role": "Designer & Co-creator",
+			"period": "2015 – 2018",
+			"logo": "/images/redlime.svg",
+			"summary": "Co-created RedLime, a creative studio focused on digital products. First real experience shipping something from zero."
+		}
+	]
+}

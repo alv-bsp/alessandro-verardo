@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Alessandro Verardo | Digital Designer and Developer</title>
+		<meta name="description" content="I design digital products and the systems around them. Product Designer, originally from Italy." />
+		<meta name="author" content="Alessandro Verardo" />
+		<meta property="og:title" content="Alessandro Verardo | Digital Designer and Developer" />
+		<meta property="og:description" content="I design digital products and the systems around them. Product Designer, originally from Italy." />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://alessandroverardo.it" />
+		<link rel="shortcut icon" href="/favicon.ico" />
+		%sveltekit.head%
+		<script>
+			(function() {
+				var t = localStorage.getItem('theme');
+				if (!t) t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+				document.documentElement.setAttribute('data-theme', t);
+			})();
+		</script>
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">%sveltekit.body%</div>
+	</body>
+</html>
