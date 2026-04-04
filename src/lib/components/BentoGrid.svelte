@@ -216,6 +216,7 @@
 	);
 
 	function onPointerDown(e: PointerEvent, cardId: string) {
+		if (e.pointerType === 'touch') return;
 		if (e.button !== 0 || animating) return;
 		const target = e.target as HTMLElement;
 		if (target.closest('a, button, iframe, input, textarea')) return;
@@ -412,13 +413,18 @@
 	.cell {
 		will-change: transform, opacity;
 		transform-origin: center center;
-		cursor: grab;
-		touch-action: none;
 		user-select: none;
 	}
 
-	.cell:active {
-		cursor: grabbing;
+	@media (hover: hover) and (pointer: fine) {
+		.cell {
+			cursor: grab;
+			touch-action: none;
+		}
+
+		.cell:active {
+			cursor: grabbing;
+		}
 	}
 
 	.cell > :global(*) {

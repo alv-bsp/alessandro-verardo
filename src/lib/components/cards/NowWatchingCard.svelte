@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { base } from '$app/paths';
+
 	let { title, poster, oneLiner }: { title: string; poster: string; oneLiner?: string } = $props();
 </script>
 
@@ -6,7 +8,7 @@
 	<p class="label">Now Watching</p>
 	<div class="show-info">
 		<div class="poster-wrapper">
-			<img src={poster} alt="{title} poster" class="poster-img" />
+			<img src="{base}{poster}" alt="{title} poster" class="poster-img" />
 		</div>
 		<div class="show-details">
 			<h3 class="show-title">{title}</h3>

@@ -14,7 +14,10 @@ const config = {
 	kit: {
 		adapter: adapter({
 			fallback: undefined
-		})
+		}),
+		paths: {
+			base: process.argv.includes('dev') ? '' : process.env.BASE_PATH ?? ''
+		}
 	}
 };
 

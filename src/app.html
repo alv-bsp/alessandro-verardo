@@ -10,7 +10,17 @@
 		<meta property="og:description" content="I design digital products and the systems around them. Product Designer, originally from Italy." />
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="https://alessandroverardo.it" />
-		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="shortcut icon" href="%sveltekit.assets%/favicon.ico" />
+		<style>
+			@font-face {
+				font-family: 'Axiforma';
+				src: url('%sveltekit.assets%/fonts/Axiforma-SemiBold.woff2') format('woff2'),
+					url('%sveltekit.assets%/fonts/Axiforma-SemiBold.woff') format('woff');
+				font-weight: 600;
+				font-style: normal;
+				font-display: swap;
+			}
+		</style>
 		%sveltekit.head%
 		<script>
 			(function() {

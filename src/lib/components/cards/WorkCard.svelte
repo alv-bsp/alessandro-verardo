@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { base } from '$app/paths';
+
 	type WorkEntry = {
 		company: string;
 		role: string;
@@ -16,7 +18,7 @@
 	<div class="work-header">
 		<div class="company-badge">
 			{#if entry.logo}
-				<img src={entry.logo} alt={entry.company} class="company-logo" class:invert-dark={entry.invertLogo} />
+				<img src="{base}{entry.logo}" alt={entry.company} class="company-logo" class:invert-dark={entry.invertLogo} />
 			{:else}
 				<span class="company-initial">{entry.company[0]}</span>
 			{/if}
