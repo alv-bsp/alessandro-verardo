@@ -45,7 +45,9 @@
 
 	function project(lat: number, lng: number): { x: number; y: number } {
 		const x = ((lng + 180) / 360) * 100;
-		const y = ((90 - lat) / 180) * 100;
+		const LAT_TOP = 83;
+		const LAT_BOTTOM = -56;
+		const y = ((LAT_TOP - lat) / (LAT_TOP - LAT_BOTTOM)) * 100;
 		return { x, y };
 	}
 </script>

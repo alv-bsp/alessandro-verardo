@@ -157,12 +157,12 @@
 		},
 		{
 			"name": "Namibia",
-			"lat": -22.56,
-			"lng": 17.08
+			"lat": -8.00,
+			"lng": 14.08
 		},
 		{
 			"name": "Botswana",
-			"lat": -22.33,
+			"lat": -10.00,
 			"lng": 24.68
 		},
 		{
@@ -263,7 +263,7 @@
 			"period": "2024 - Present",
 			"logo": "/images/wetransfer.svg",
 			"invertLogo": true,
-			"summary": "Designing and producing Wallpapers, the full-screen creative ad format seen by millions during file transfers. Working with brands like Apple, Coca-Cola, Chanel, Ford, Red Bull, Universal and many more. Managing campaigns end-to-end across creative formats, with a huge focus on streamlining and improving tools for creative production."
+			"summary": "Co-leading WeTransfer's Creative Studio. Designing and producing Wallpapers, backgroundsseen by millions during file transfers. Working with brands like Apple, Coca-Cola, Chanel, Ford, Red Bull, Universal and many more. Managing campaigns end-to-end across creative formats, with a huge focus on streamlining and improving tools for creative production."
 		},
 		{
 			"company": "Evernote",
