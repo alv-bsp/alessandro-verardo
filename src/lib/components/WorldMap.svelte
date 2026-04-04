@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { base } from '$app/paths';
+	import { asset } from '$app/paths';
 
 	type Place = { name: string; lat: number; lng: number };
 	let { places }: { places: Place[] } = $props();
@@ -41,7 +41,7 @@
 			}
 			landDots = dots;
 		};
-		img.src = `${base}/images/world-map.svg`;
+		img.src = asset('/images/world-map.svg');
 	});
 
 	function project(lat: number, lng: number): { x: number; y: number } {

@@ -1,10 +1,12 @@
 <script lang="ts">
+	import { asset } from '$app/paths';
+
 	let { name, headline, bio }: { name: string; headline: string; bio: string } = $props();
 </script>
 
 <div class="card intro-card">
 	<img
-		src="/images/alessandro-verardo.png"
+		src={asset('/images/alessandro-verardo.png')}
 		alt={name}
 		class="avatar"
 		draggable="false"
