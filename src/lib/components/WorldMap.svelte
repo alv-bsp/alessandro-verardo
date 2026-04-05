@@ -14,6 +14,7 @@
 	const DOT_SPACING_Y = SVG_H / ROWS;
 
 	let landDots = $state<{ x: number; y: number }[]>([]);
+	const mapSrc = asset('/images/world-map.svg');
 
 	onMount(() => {
 		const img = new Image();
@@ -41,7 +42,7 @@
 			}
 			landDots = dots;
 		};
-		img.src = asset('/images/world-map.svg');
+		img.src = mapSrc;
 	});
 
 	function project(lat: number, lng: number): { x: number; y: number } {
